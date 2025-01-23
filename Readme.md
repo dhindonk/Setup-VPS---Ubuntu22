@@ -87,9 +87,9 @@ cd nama_folder_project
 ```bash
 sudo cp .env.example .env
 ```
+
 ## Edit bagian access database
 ada 2 cara yang direkomendasikan:
-
 #1
 ```bash
 sudo vim .env
@@ -114,18 +114,17 @@ sudo chown -R www-data:www-data storage bootstrap/cache
 ```
 
 ## Konfigurasi domain
+[ Foto ] 
 ```bash
-
+sudo vim /etc/nginx/sites-available/master.conf
 ```
 
-```bash
-sudo vim /etc/nginx/sites-available/wisata.conf
-```
+# Sesuaikan konten dibawah lalu Copy paste 
 ```bash
 server {
  listen 80;
- server_name wisata.jagofullstack.com www.wisata.jagofullstack.com;
- root /var/www/laravel-wisata-backend/public;
+ server_name link_domain.com www.link_domain.com;
+ root /var/www/nama_folder_project/public;
  index index.php;
  location / {
  try_files $uri $uri/ /index.php?$query_string;
@@ -139,7 +138,7 @@ server {
 
 ## Konfigurasi nginx
 ```bash
-sudo ln -s /etc/nginx/sites-available/wisata.conf /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/master.conf /etc/nginx/sites-enabled/
 ```
 ```bash
 sudo nginx -t
@@ -152,11 +151,9 @@ sudo systemctl reload nginx
 ```bash
 sudo snap install core; sudo snap refresh core
 ```
-
 ```bash
 sudo apt remove certbot
 ```
-
 ```bash
 sudo snap install --classic certbot
 ```
@@ -182,7 +179,7 @@ sudo ufw delete allow 'Nginx HTTP'
 sudo ufw status
 ```
 ```bash
-sudo certbot --nginx -d link_disini.com -d www.link_nya_disini.com
+sudo certbot --nginx -d link_domain.com -d www.link_domain.com
 ```
 ```bash
 sudo systemctl status snap.certbot.renew.service
@@ -193,54 +190,7 @@ sudo certbot renew --dry-run
 ```bash
 
 ```
-```bash
 
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
 
 
 

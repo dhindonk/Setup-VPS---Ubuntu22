@@ -118,5 +118,130 @@ sudo chown -R www-data:www-data storage bootstrap/cache
 
 ```
 
+```bash
+sudo vim /etc/nginx/sites-available/wisata.conf
+```
+```bash
+server {
+ listen 80;
+ server_name wisata.jagofullstack.com www.wisata.jagofullstack.com;
+ root /var/www/laravel-wisata-backend/public;
+ index index.php;
+ location / {
+ try_files $uri $uri/ /index.php?$query_string;
+ }
+ location ~ \.php$ {
+ include snippets/fastcgi-php.conf;
+ fastcgi_pass unix:/var/run/php/php8.2-fpm.sock; # Sesuaikan versi PHP jika berbeda
+ }
+}
+```
+
+## Konfigurasi nginx
+```bash
+sudo ln -s /etc/nginx/sites-available/wisata.conf /etc/nginx/sites-enabled/
+```
+```bash
+sudo nginx -t
+```
+```bash
+sudo systemctl reload nginx
+```
+## Setting SSL/https
+
+```bash
+sudo snap install core; sudo snap refresh core
+```
+
+```bash
+sudo apt remove certbot
+```
+
+```bash
+sudo snap install --classic certbot
+```
+```bash
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+```bash
+sudo ufw status
+```
+```bash
+sudo ufw enable
+```
+```bash
+sudo ufw allow 'OpenSSH'
+```
+```bash
+sudo ufw allow 'Nginx Full'
+```
+```bash
+sudo ufw delete allow 'Nginx HTTP'
+```
+```bash
+sudo ufw status
+```
+```bash
+sudo certbot --nginx -d link_disini.com -d www.link_nya_disini.com
+```
+```bash
+sudo systemctl status snap.certbot.renew.service
+```
+```bash
+sudo certbot renew --dry-run
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+```bash
+
+```
+
+
 
 

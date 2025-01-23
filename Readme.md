@@ -90,6 +90,7 @@ sudo cp .env.example .env
 
 ## Edit bagian access database
 ada 2 cara yang direkomendasikan:
+-
 #1
 ```bash
 sudo vim .env

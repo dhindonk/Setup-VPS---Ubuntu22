@@ -49,14 +49,14 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 ```
 ```bash
-sudo apt install php8.2 php8.2-cli php8.2-{bz2,curl,mbstring,intl}
+sudo apt install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl}
 ```
 # Kalau ada pilihan2 tinggal Enter saja
 ```bash
-sudo apt install php8.2-fpm
+sudo apt install php8.3-fpm
 ```
 ```bash
-sudo apt install php8.2-mysql
+sudo apt install php8.3-mysql
 ```
 ```bash
 sudo apt install php-curl php-json php-common php-zip php-gd php-xml php-pear php-bcmath
@@ -125,15 +125,15 @@ sudo vim /etc/nginx/sites-available/master.conf
 ```bash
 server {
  listen 80;
- server_name link_domain.com www.link_domain.com;
- root /var/www/nama_folder_project/public;
+ server_name link.com www.link.com;
+ root /var/www//public;
  index index.php;
  location / {
  try_files $uri $uri/ /index.php?$query_string;
  }
  location ~ \.php$ {
  include snippets/fastcgi-php.conf;
- fastcgi_pass unix:/var/run/php/php8.2-fpm.sock; # Sesuaikan versi PHP jika berbeda
+ fastcgi_pass unix:/var/run/php/php8.3-fpm.sock; # Sesuaikan versi PHP jika berbeda
  }
 }
 ```

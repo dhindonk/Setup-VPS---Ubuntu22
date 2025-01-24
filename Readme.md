@@ -64,6 +64,9 @@ sudo apt install php-curl php-json php-common php-zip php-gd php-xml php-pear ph
 ```bash
 sudo apt install curl git unzip
 ```
+```bash
+sudo apt install php-mysql
+```
 ## Install Composer
 ```bash
 curl -sS https://getcomposer.org/installer -o composer-setup.php

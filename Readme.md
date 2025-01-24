@@ -14,7 +14,7 @@ ssh dhin@102.893.092.1
 
 ## Install Mysql/mariadb
 ```bash
-sudo apt-get update sudo apt install mariadb-server mariadb-client
+sudo apt-get update && sudo apt install mariadb-server mariadb-client
 ```
 ```bash
 sudo mysql_secure_installation

@@ -51,6 +51,7 @@ sudo apt update
 ```bash
 sudo apt install php8.2 php8.2-cli php8.2-{bz2,curl,mbstring,intl}
 ```
+# Kalau ada pilihan2 tinggal Enter saja
 ```bash
 sudo apt install php8.2-fpm
 ```

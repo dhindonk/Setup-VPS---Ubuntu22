@@ -154,7 +154,7 @@ sudo systemctl reload nginx
 ## Setting SSL/https
 
 ```bash
-sudo snap install core; sudo snap refresh core
+sudo snap install core && sudo snap refresh core
 ```
 ```bash
 sudo apt remove certbot
